@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--Segmento 1-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="24sp"
+                android:layout_height="24sp"
+                android:layout_marginRight="16sp"
+                android:id="@+id/avatar"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Titulo imagen"
+                android:id="@+id/titulo_imagen"/>
+
+        </LinearLayout>
+        <!--Segmento 2 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="192sp"
+            android:scaleType="centerCrop"
+            android:id="@+id/imagen"/>
+
+        <!--Segmento 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8sp"
+                android:src="@drawable/ojo" />
+
+            <TextView
+                android:id="@+id/noVisualizaciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visualizaciones" />
+
+            <ImageView
+                android:id="@+id/iconoFavorito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24sp"
+                android:layout_marginRight="8sp"
+                android:src="@drawable/favorito"
+                android:tint="@color/tinte_icono_favorito" />
+
+            <TextView
+                android:id="@+id/noLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Likes" />
+
+            <ImageView
+                android:id="@+id/iconoComentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24sp"
+                android:layout_marginRight="8sp"
+                android:src="@drawable/comentario"
+                android:tint="@color/tinte_icono_comentario" />
+
+            <TextView
+                android:id="@+id/noComentarios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comentarios" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

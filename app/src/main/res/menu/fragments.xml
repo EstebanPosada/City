@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottomHome"
+        android:icon="@drawable/home"
+        android:title="Home" />
+    <item
+        android:id="@+id/bottomSearch"
+        android:icon="@drawable/searcher30x"
+        android:title="Search" />
+    <item
+        android:id="@+id/bottomCam"
+        android:icon="@drawable/camera"
+        android:title="Camera" />
+    <item
+        android:id="@+id/bottomMap"
+        android:icon="@drawable/placeholder90x"
+        android:title="Map" />
+    <item
+        android:id="@+id/bottomCont"
+        android:icon="@drawable/user"
+        android:title="Contacts" />
+
+</menu>

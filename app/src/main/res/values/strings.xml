@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">CityEye</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="log">Logo</string>
+    <string name="email">example@example.com</string>
+    <string name="Password">Contraseña</string>
+    <string name="in">Ingresar</string>
+    <string name="or">Or</string>
+    <string name="forgot">¿Olvidó su contraseña?</string>
+    <string name="aqui">Click aquí</string>
+    <string name="fb">Ingresar con Facebook</string>
+    <string name="title_activity_principal">Principal</string>
+    <string name="location">Ubicación \nPública</string>
+    <string name="title_activity_add_f">AddF</string>
+    <string name="search">Buscar...</string>
+    <string name="namefr">Nombre</string>
+    <string name="invite">Enviar invitación a un amigo</string>
+    <string name="mail">Email</string>
+    <string name="mail2">Agregar otro email</string>
+    <string name="send">Enviar</string>
+    <string name="rusname">Nickname</string>
+    <string name="rmail">Email</string>
+    <string name="rpass">Contraseña</string>
+    <string name="rdoc">Cédula</string>
+    <string name="rcel">Celular</string>
+    <string name="regist">Registrar</string>
+    <string name="title_activity_contactos">Contactos</string>
+    <string name="nocuenta">¿No tienes cuenta?</string>
+    <string name="register">Registrate</string>
+    <string name="descripcion">Escriba una descripción</string>
+    <string name="ubicacion_formulario">Agregar Ubicación</string>
+    <string name="tipo_denuncia">Tipo de denuncia</string>
+    <string name="denuncia_publica">Denuncia \npública</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="enviar">ENVIAR</string>
+    <string name="cerrar">Cerrar</string>
+    <string name="olvidaste_contraseña">¿Olvidaste tu contraseña?</string>
+    <string name="correo">Solo necesitamos tu correo para recuperarla</string>
+
+
+    <string name="marca_usuario">Añadido por %s</string>
+    <string name="comentarios_formato">%s Comentarios</string>
+    <string name="likes_formato">%s Likes</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="tipo_denuncia_array">
+        <item>Tipo de Denuncia</item>
+        <item>extorsión</item>
+        <item>movilidad</item>
+        <item>corrupción</item>
+        <item>hurtos</item>
+        <item>venta Ilegal</item>
+        <item>espacios Inseguros</item>
+        <item>perturbación al orden público</item>
+        <item>violencia de género</item>
+        <item>armas</item>
+        <item>homicidios</item>
+        <item>maltrato animal</item>
+        <item>grupos criminales</item>
+        <item>daño ambiental</item>
+        <item>otras denuncias</item>
+    </string-array>
+
+    <string-array name="ubicacion_denuncias">
+        <item>Agregar ubicación</item>
+        <item>Barrio Popular</item>
+        <item>Santa Cruz</item>
+        <item>Manrique</item>
+        <item>Aranjuez</item>
+        <item>Castilla</item>
+        <item>Doce de Octubre</item>
+        <item>Robledo</item>
+        <item>Villa Hermosa</item>
+        <item>Buenos Aires</item>
+        <item>La Candelaria</item>
+        <item>Laureles-Estadio</item>
+        <item>La América</item>
+        <item>San Javier</item>
+        <item>El Poblado</item>
+        <item>Guayabal</item>
+        <item>Belén</item>
+        <item>Envigado</item>
+        <item>Itagui</item>
+        <item>Sabaneta</item>
+        <item>La Estrella</item>
+        <item>Caldas</item>
+        <item>Bello</item>
+    </string-array>
+
+    <string name="facebook_app_id">1210553732324913</string>
+    <string name="share">Compartir (Facebook)</string>
+    <string name="share_comp">Compartir Denuncia</string>
+    <string name="share_msg">Compartir en facebook</string>
+    <string name="acepta">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+
+</resources>

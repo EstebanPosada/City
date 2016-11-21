@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimario">#A3DEC9</color>
+    <color name="colorPrimarioOscuro">#4AC3BE</color>
+    <color name="colorAcento">#FAAC64</color>
+    <color name="colorBackground">#002F59</color>
+
+    <color name="tinte_icono_favorito">#E91E63</color>
+    <color name="tinte_icono_comentario">#4083A9</color>
+    <color name="color_cerrar">#1d10da</color>
+    <color name="col">#E91E63</color>
+
+
+
+    <color name="tab1">#42d4f4</color>
+    <color name="tab2">#00796B</color>
+    <color name="tab3">#15ed56</color>
+    <color name="tab4">#a500ff</color>
+    <color name="tab5">#00ffa5</color>
+    <color name="blanco">#ffffff</color>
+    <color name="gris2">#E91E63</color>
+    <color name="gris">#c9c6c6</color>
+
+</resources>

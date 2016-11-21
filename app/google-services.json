@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "723447563327",
+    "firebase_url": "https://e-manager-44914.firebaseio.com",
+    "project_id": "e-manager-44914",
+    "storage_bucket": "e-manager-44914.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723447563327:android:4edefcc0343546ee",
+        "android_client_info": {
+          "package_name": "com.estebanposada.probefirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723447563327-nm3cdcpfm42178rt49hmgrr1srqb5d1l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.estebanposada.probefirebase",
+            "certificate_hash": "AD9E401BE99E1B7A9AC12162F6F289981B6CFD66"
+          }
+        },
+        {
+          "client_id": "723447563327-ojiegsc9qlkauugdg0hovikdag8lverj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpcF_CwwOo8OQVkYVMeDHDbUL8LtUkOIg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723447563327-ojiegsc9qlkauugdg0hovikdag8lverj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "723447563327-l6t62oj0s1puslpvk6b24vf3239f821h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.emanager.DenunciasAppp"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723447563327:android:6c64265a4bab640e",
+        "android_client_info": {
+          "package_name": "emanager.com.cityeye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723447563327-9phg2i393160m18bbc75t7afu8i9a3ng.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "emanager.com.cityeye",
+            "certificate_hash": "AD9E401BE99E1B7A9AC12162F6F289981B6CFD66"
+          }
+        },
+        {
+          "client_id": "723447563327-ojiegsc9qlkauugdg0hovikdag8lverj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpcF_CwwOo8OQVkYVMeDHDbUL8LtUkOIg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723447563327-ojiegsc9qlkauugdg0hovikdag8lverj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "723447563327-l6t62oj0s1puslpvk6b24vf3239f821h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.emanager.DenunciasAppp"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
