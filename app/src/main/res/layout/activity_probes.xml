@@ -4,10 +4,11 @@
     android:id="@+id/activity_probes"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="emanager.com.cityeye.Probes">
+    tools:context="emanager.com.cityeye.Probes"
+    android:background="#fff">
 
-    <com.roughike.bottombar.BottomBar
+    <!--<com.roughike.bottombar.BottomBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        />-->
 </RelativeLayout>

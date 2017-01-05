@@ -12,61 +12,40 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/searcher30x"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/search"/>
+            android:layout_weight="1"
+            android:hint="@string/search"
+            android:id="@+id/edsearch"/>
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:src="@drawable/searcher30x"
+            android:id="@+id/lupa"/>
     </LinearLayout>
 
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/invite"/>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/closeenvelope30x"/>
-        <EditText
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/faq30x"
+            android:layout_gravity="right"
+            android:id="@+id/panic"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/mail"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/plus30x"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/mail2"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/send"/>
-    </LinearLayout>
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/recycler2"
-        android:scrollbars="vertical">
+            android:id="@+id/recycler2"
+            android:scrollbars="vertical">
 
     </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
 
 </LinearLayout>

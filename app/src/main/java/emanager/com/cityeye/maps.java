@@ -15,12 +15,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -31,6 +35,7 @@ public class maps extends Fragment implements OnMapReadyCallback{
     private GoogleMap mapa;
     private View Myview;
     private MapView mapView;
+    //private static List<Denuncias> myphoto = new ArrayList<>();
 
 
 
@@ -53,7 +58,7 @@ public class maps extends Fragment implements OnMapReadyCallback{
             e.printStackTrace();
         }
         mapView.getMapAsync(this);
-        agregarFAB();
+        //agregarFAB();
 
 
 
@@ -96,6 +101,14 @@ public class maps extends Fragment implements OnMapReadyCallback{
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mapa = googleMap;
+
+        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(6.2686734,-75.6664331), 8));
+        for (int i = 0; i<home.myphoto.size(); i++){
+            mapa.addMarker(new MarkerOptions()
+                    .position(new LatLng(Double.valueOf(home.myphoto.get(i).getLatitud()),Double.valueOf(home.myphoto.get(i).getLongitud())))
+                    .title(home.myphoto.get(i).getDescripcion()).snippet(home.myphoto.get(i).getLugar()));
+        }
+
     }
 
     public void createMultipleListDialog(){
@@ -113,6 +126,7 @@ public class maps extends Fragment implements OnMapReadyCallback{
 
 
         builder.create().show();*/
+
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
@@ -147,7 +161,7 @@ public class maps extends Fragment implements OnMapReadyCallback{
 
     }
 
-    public void agregarFAB (){
+    /*public void agregarFAB (){
        FloatingActionButton miFAB= (FloatingActionButton) Myview.findViewById(R.id.fabMiFAB);
         miFAB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,5 +170,5 @@ public class maps extends Fragment implements OnMapReadyCallback{
                 createMultipleListDialog();
             }
         });
-    }
+    }*/
 }

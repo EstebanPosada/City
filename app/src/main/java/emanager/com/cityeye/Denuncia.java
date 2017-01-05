@@ -8,70 +8,7 @@ import java.util.List;
  */
 
 public class Denuncia {
-    /*private String fname;
-    private int image;
-    private int ic1, ic2, ic3, ic4, ic5;
-    private String tipo;
-    private String dname, coment;
-    private String hora;
 
-    public Denuncia(String fname, int image, int ic1, int ic2, int ic3, int ic4, int ic5, String tipo, String dname, String coment, String hora) {
-        this.fname = fname;
-        this.image = image;
-        this.ic1 = ic1;
-        this.ic2 = ic2;
-        this.ic3 = ic3;
-        this.ic4 = ic4;
-        this.ic5 = ic5;
-        this.tipo = tipo;
-        this.dname = dname;
-        this.coment = coment;
-        this.hora = hora;
-    }
-
-    public String getFname() {
-        return fname;
-    }
-
-    public int getImage() {
-        return image;
-    }
-
-    public int getIc1() {
-        return ic1;
-    }
-
-    public int getIc2() {
-        return ic2;
-    }
-
-    public int getIc3() {
-        return ic3;
-    }
-
-    public int getIc4() {
-        return ic4;
-    }
-
-    public int getIc5() {
-        return ic5;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public String getDname() {
-        return dname;
-    }
-
-    public String getComent() {
-        return coment;
-    }
-
-    public String getHora() {
-        return hora;
-    }*/
 
     private String noVisualizaciones;
     private String noLikes;

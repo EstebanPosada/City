@@ -1,5 +1,6 @@
 package emanager.com.cityeye;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,27 +40,31 @@ public class Registro extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListenerp;
 
     private DatabaseReference myRef;
-    private String user = "users", celphone = "cel", doc = "document", mail = "email";
+    private String user = "users";
     private String probe = "message";
-    private String logmail, logpass;
-    String value;
+    private String logmail, logpass, logcc, lognick, logphone;
+    private static String uid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        // Write a message to the database
-        //database = FirebaseDatabase.getInstance();
-        //myRef = database.getReference(user);
-        myFirebaseRef = new Firebase("https://e-manager-44914.firebaseio.com/users/");
+        database = FirebaseDatabase.getInstance();
         mAuthp = FirebaseAuth.getInstance();
 
-        FirebaseUser myFireUser = mAuthp.getCurrentUser();
-        if (myFireUser != null){
-            String uid = mAuthp.getCurrentUser().getUid();
 
-        }
+        mAuthListenerp = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser myFireUs = firebaseAuth.getCurrentUser();
+                if (myFireUs != null){
+                    Log.d("firebase", "igned in" + myFireUs.getUid());
+                } else {
+                    Log.d("firebase", "signed out");
+                }
+            }
+        };
 
         edNick = (EditText) findViewById(R.id.etnick);
         edmail = (EditText) findViewById(R.id.etmail);
@@ -69,112 +74,54 @@ public class Registro extends AppCompatActivity {
         btnreg = (Button) findViewById(R.id.idregistra);
 
 
-
-        /*mAuthListenerp = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null){
-                    Toast.makeText(Registro.this, "Usuario: " + user.getUid(), Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(Registro.this, "No creado", Toast.LENGTH_SHORT).show();
-                }
-            }
-        };*/
-
         btnreg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                setUpUser();
-                mAuthp.createUserWithEmailAndPassword(logmail,logpass).addOnCompleteListener(Registro.this, new OnCompleteListener<AuthResult>() {
+            if (!setUpUser()) {
+                Toast.makeText(Registro.this, "Faltan datos", Toast.LENGTH_SHORT).show();
+            } else {
+                mAuthp.createUserWithEmailAndPassword(logmail, logpass).addOnCompleteListener(Registro.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-
-
-                        if (!task.isSuccessful()){
-                            Toast.makeText(Registro.this, "Falló autenticación", Toast.LENGTH_SHORT).show();
+                        if (!task.isSuccessful()) {
+                            Toast.makeText(Registro.this, "Falló autenticación: " + task.getException(), Toast.LENGTH_SHORT).show();
                         } else {
                             onAuthenticationSucess(task.getResult().getUser());
                         }
                     }
                 });
-
-                /*String user = edNick.getText().toString();
-                String mail = edmail.getText().toString();
-                String pass = edpass.getText().toString();
-                //myRef.setValue("Hello, World!");
-                if (mail.equals("") && user.equals("") && pass.equals("")){
-                    Toast.makeText(Registro.this, "Faltan campos", Toast.LENGTH_SHORT).show();
-                } else {
-                   *//* String key = myRef.child(user).push().getKey();
-                    myRef.child(key).child(celphone).setValue(edcel.getText().toString());
-                    myRef.child(key).child(doc).setValue(edcc.getText().toString());
-                    myRef.child(key).child(mail).setValue(edmail.getText().toString());
-                    Toast.makeText(Registro.this, "Enviado: message - Hello, World!!", Toast.LENGTH_SHORT).show();*//*
-                    *//*mAuthp.createUserWithEmailAndPassword(mail, pass).addOnCompleteListener(Registro.this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-
-
-                            if (!task.isSuccessful()){
-                                Toast.makeText(Registro.this, "Falló registro", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });*//*
-                }
-*/
+            }
             }
         });
 
-
-
-
-        // Read from the database
-        /*myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                //value = dataSnapshot.getValue(String.class);
-                //Log.d(TAG, "Value is: " + value);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException());
-            }
-        });*/
     }
-
-    /*@Override
-    public void onStart() {
-        super.onStart();
-        mAuthp.addAuthStateListener(mAuthListenerp);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        if (mAuthListenerp != null) {
-            mAuthp.removeAuthStateListener(mAuthListenerp);
-        }
-    }*/
     private void onAuthenticationSucess(FirebaseUser FiUser){
-        User usernew = new User(FiUser.getUid(), myuser.getName(), myuser.getPhone(), myuser.getEmail(), myuser.getPass());
+        uid = FiUser.getUid().toString();
+        User usernew = new User(FiUser.getUid(), lognick, logphone, logmail, logpass, logcc);
+        myRef = database.getReference(user);
+        myRef.child(FiUser.getUid()).setValue(usernew);
 
-        //StartActivity
-        myRef.child(user).child(FiUser.getUid()).setValue(usernew);
+        startActivity(new Intent(getApplicationContext(), Probes.class));
+        finish();
     }
-    public void setUpUser(){
-        myuser = new User();
-        myuser.setName(edNick.getText().toString());
-        myuser.setEmail(edmail.getText().toString());
-        myuser.setPhone(edcel.getText().toString());
-        myuser.setPass(edpass.getText().toString());
-        logmail = myuser.getEmail();
-        logpass = myuser.getPass();
+    public boolean setUpUser(){
+        logmail = edmail.getText().toString();
+        logpass = edpass.getText().toString();
+        logcc = edcc.getText().toString();
+        lognick = edNick.getText().toString();
+        logphone = edcel.getText().toString();
+        if (logpass.equals("") || logmail.equals("") || logcc.equals("") || lognick.equals("") || logphone.equals("")) {
+            return false;
+        } else {
+            myuser = new User();
+            myuser.setEmail(logmail);
+            myuser.setPass(logpass);
+            myuser.setDocument(logcc);
+            myuser.setNickname(lognick);
+            myuser.setCel(logphone);
+            return true;
+        }
     }
 
 }

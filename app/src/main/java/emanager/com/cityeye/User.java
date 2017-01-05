@@ -6,18 +6,19 @@ package emanager.com.cityeye;
 
 public class User {
 
-    private String id, name, phone, email, pass;
+    private String id, nickname, cel, email, pass, document;
 
     public User(){
 
     }
 
-    public User(String id, String name, String phone, String email, String pass) {
+    public User(String id, String nickname, String cel, String email, String pass, String document) {
         this.id = id;
-        this.name = name;
-        this.phone = phone;
+        this.nickname = nickname;
+        this.cel = cel;
         this.email = email;
         this.pass = pass;
+        this.document = document;
     }
 
     public String getId() {
@@ -28,20 +29,28 @@ public class User {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getCel() {
+        return cel;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setCel(String cel) {
+        this.cel = cel;
+    }
+
+    public String getDocument() {
+        return document;
+    }
+
+    public void setDocument(String document) {
+        this.document = document;
     }
 
     public String getEmail() {

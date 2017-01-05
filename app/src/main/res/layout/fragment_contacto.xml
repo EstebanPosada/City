@@ -14,8 +14,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="140sp"
-            android:layout_height="150sp"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_margin="10sp"
             android:src="@drawable/logo"/>
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,12 +92,27 @@
                 android:textSize="12sp"/>
         </LinearLayout>
     </LinearLayout>
-    <!--<android.support.v7.widget.RecyclerView
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/faq30x"
+            android:layout_gravity="right"
+            android:id="@+id/panic"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/recycler"
         android:scrollbars="vertical">
 
-    </android.support.v7.widget.RecyclerView>-->
+    </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
 
 </LinearLayout>

@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,6 +25,7 @@ public class contacto extends Fragment {
     LinearLayoutManager layoutManager;
     Button btn;
     View myView;
+    private List<Denuncias> mio = new ArrayList<>();
 
     public contacto() {
         // Required empty public constructor
@@ -49,12 +53,22 @@ public class contacto extends Fragment {
             }
         });
 
-        /*rv = (RecyclerView) myView.findViewById(R.id.recycler);
+        mio = new ArrayList<>();
+        final AdapterDen adp = new AdapterDen(mio);
+
+        String thisUser = "";
+        for (int j = 0; j < home.myphoto.size(); j++) {
+            String d = home.myphoto.get(j).getDescripcion().trim(), l = home.myphoto.get(j).getLugar().trim(), n = home.myphoto.get(j).getNick().trim();
+            if (thisUser.equals(d) || thisUser.equals(l) || thisUser.equals(n))
+                mio.add(home.myphoto.get(j));
+        }
+
+        rv = (RecyclerView) myView.findViewById(R.id.recycler);
         layoutManager = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(layoutManager);
 
-        AdapterProbe adatador = new AdapterProbe();
-        rv.setAdapter(adatador);*/
+        //AdapterProbe adatador = new AdapterProbe();
+        rv.setAdapter(adp);
 
         return myView;
     }

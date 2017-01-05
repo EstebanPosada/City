@@ -3,6 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="emanager.com.cityeye.camera">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:src="@drawable/faq30x"
+        android:layout_gravity="right"
+        android:id="@+id/panic"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -133,13 +145,13 @@
                 android:layout_marginRight="20dp"
                 android:id="@+id/btncancelar"/>
 
-            <com.facebook.share.widget.ShareButton
+            <!--<com.facebook.share.widget.ShareButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/share_btn"
                 android:contentDescription="@string/share"/>
-
+-->
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -161,4 +173,5 @@
         android:id="@+id/btnFoto"/>
 
     </LinearLayout>
+    </RelativeLayout>
 </ScrollView>

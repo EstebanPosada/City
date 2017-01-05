@@ -6,6 +6,18 @@
     tools:context="emanager.com.cityeye.maps">
 
     <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:src="@drawable/faq30x"
+        android:layout_gravity="right"
+        android:id="@+id/panic"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,14 +29,14 @@
         android:id="@+id/myMapView"
         class="com.google.android.gms.maps.SupportMapFragment"
         />
-
-    <android.support.design.widget.FloatingActionButton
+    </RelativeLayout>
+    <!--<android.support.design.widget.FloatingActionButton
         android:layout_height="131dp"
         android:layout_width="wrap_content"
         android:src="@drawable/list_icon"
         app:backgroundTint="@color/colorBackground"
         android:id="@+id/fabMiFAB"
-        />
+        />-->
 
 
 </FrameLayout>

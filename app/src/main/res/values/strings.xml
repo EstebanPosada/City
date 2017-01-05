@@ -4,6 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="log">Logo</string>
+    <string name="logout">Log Out</string>
     <string name="email">example@example.com</string>
     <string name="Password">Contraseña</string>
     <string name="in">Ingresar</string>
@@ -49,9 +50,9 @@
 
     <string-array name="tipo_denuncia_array">
         <item>Tipo de Denuncia</item>
-        <item>extorsión</item>
+        <item>extorsion</item>
         <item>movilidad</item>
-        <item>corrupción</item>
+        <item>corrupcion</item>
         <item>hurtos</item>
         <item>venta Ilegal</item>
         <item>espacios Inseguros</item>
