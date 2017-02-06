@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--Segmento 1-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_marginRight="20sp"
+                android:id="@+id/avatarden"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Nickname"
+                android:id="@+id/tit_nick" />
+        </LinearLayout>
+
+        <!--Segmento 2 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="192sp"
+            android:textAlignment="center"
+            android:id="@+id/imagenden"/>
+
+        <!--Segmento 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:id="@+id/imok"
+                    android:src="@drawable/icon90x"/>
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:id="@+id/imbad"
+                    android:src="@drawable/wrong90x"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_gravity="center"
+                    android:id="@+id/imoklog"
+                    android:src="@drawable/icon90x"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="100"/>
+                <ImageView
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:layout_gravity="center"
+                    android:id="@+id/imbadlog"
+                    android:src="@drawable/wrong90x"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="100"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/descden"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
